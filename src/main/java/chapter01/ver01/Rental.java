@@ -1,5 +1,6 @@
 package chapter01.ver01;
 
+//租赁
 public class Rental {
 	private Movie _movie; // 影片
 	private int _daysRented; // 租期
