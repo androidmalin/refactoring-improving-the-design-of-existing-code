@@ -43,7 +43,14 @@ public class Customer {
         return result;
     }
 
-    private double amountFor(Rental aRental) {
+    /**
+     * option+command +m --> extract method
+     * fn+shirt+f6-->rename var name
+     *
+     * @param aRental Rental
+     * @return thisAmount
+     */
+    private double amountFor(final Rental aRental) {
         double result = 0;
         // determine amounts for each line
         switch (aRental.getMovie().getPriceCode()) { // 取得影片出租价格

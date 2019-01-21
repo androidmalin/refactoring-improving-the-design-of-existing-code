@@ -1,4 +1,4 @@
-package chapter01.ver01;
+package chapter01.ver06;
 
 
 import org.testng.annotations.Test;

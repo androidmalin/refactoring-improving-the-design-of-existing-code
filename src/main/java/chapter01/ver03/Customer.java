@@ -3,6 +3,7 @@ package chapter01.ver03;
 import java.util.Enumeration;
 import java.util.Vector;
 
+//page 19
 public class Customer {
     private String _name; // 姓名
     private Vector<Rental> _rentals = new Vector<Rental>(); // 租借记

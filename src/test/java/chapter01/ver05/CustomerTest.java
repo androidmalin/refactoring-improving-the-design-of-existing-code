@@ -1,7 +1,7 @@
 package chapter01.ver05;
 
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class CustomerTest {
 

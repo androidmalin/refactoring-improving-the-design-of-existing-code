@@ -1,4 +1,4 @@
-package chapter01.ver01;
+package chapter01.ver07;
 
 
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ public class CustomerTest {
         Movie movie = new Movie(title, priceCode);
         Rental rental = new Rental(movie, _daysRented);
         customer.addRental(rental);
-        String result = customer.statement();
+        String result = customer.htmlStatement();
         System.out.println(result);
     }
 }

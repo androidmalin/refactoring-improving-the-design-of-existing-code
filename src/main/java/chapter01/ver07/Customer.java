@@ -41,15 +41,11 @@ public class Customer {
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
             // show figures for each rental
-            result += each.getMovie().getTitle() + ": "
-                    + each.getCharge() + "<BR>\n";
+            result += each.getMovie().getTitle() + ": " + each.getCharge() + "<BR>\n";
         }
         // add footer lines
-        result += "<P>You owe <EM>" + getTotalCharge()
-                + "</EM><P>\n";
-        result += "On this rental you earned <EM>"
-                + getTotalFrequentRenterPoints()
-                + "</EM> frequent renter points<P>";
+        result += "<P>You owe <EM>" + getTotalCharge() + "</EM><P>\n";
+        result += "On this rental you earned <EM>" + getTotalFrequentRenterPoints() + "</EM> frequent renter points<P>";
         return result;
     }
 
