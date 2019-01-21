@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Customer {
     private String _name; // 姓名
-    private Vector _rentals = new Vector(); // 租借记
+    private Vector<Rental> _rentals = new Vector<Rental>(); // 租借记
 
     public Customer(String name) {
         _name = name;
@@ -31,18 +31,15 @@ public class Customer {
             // add frequent renter points （累计常客积点。
             frequentRenterPoints++;
             // add bonus for a two day new release rental
-            if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE)
-                    && rental.getDaysRented() > 1)
+            if ((rental.getMovie().getPriceCode() == Movie.NEW_RELEASE) && rental.getDaysRented() > 1)
                 frequentRenterPoints++;
             // show figures for this rental（显示此笔租借记录）
-            result += "\t" + rental.getMovie().getTitle() + "\t"
-                    + String.valueOf(thisAmount) + "\n";
+            result += "\t" + rental.getMovie().getTitle() + "\t" + thisAmount + "\n";
             totalAmount += thisAmount;
         }
         // add footer lines（结尾打印）
-        result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints)
-                + " frequent renter points";
+        result += "Amount owed is " + totalAmount + "\n";
+        result += "You earned " + frequentRenterPoints + " frequent renter points";
         return result;
     }
 

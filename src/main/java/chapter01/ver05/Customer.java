@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Customer {
     private String _name; // 姓名
-    private Vector _rentals = new Vector(); // 租借记
+    private Vector<Rental> _rentals = new Vector<Rental>(); // 租借记
 
     public Customer(String name) {
         _name = name;
@@ -28,13 +28,11 @@ public class Customer {
             Rental each = (Rental) rentals.nextElement();
             frequentRenterPoints += each.getFrequentRenterPoints();
             // show figures for this rental
-            result += "\t" + each.getMovie().getTitle() + "\t"
-                    + String.valueOf(each.getCharge()) + "\n";
+            result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge() + "\n";
         }
         // add footer lines
-        result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints)
-                + " frequent renter points";
+        result += "Amount owed is " + getTotalCharge() + "\n";
+        result += "You earned " + frequentRenterPoints + " frequent renter points";
         return result;
     }
 

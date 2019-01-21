@@ -9,7 +9,7 @@ public class CustomerTest {
 	public void statement() {
 		Customer customer = new Customer("John");
 		String title = "Titanic";
-		int priceCode = 1;
+		int priceCode = 2;
 		int _daysRented = 7;
 		Movie movie = new Movie(title, priceCode);
 		Rental rental = new Rental(movie, _daysRented);
